@@ -71,7 +71,8 @@ these macros are defined, the boot loader usees them.
 
 #ifndef USB_CFG_DMINUS_BIT
   /* This is Revision 3 and later (where PD6 and PD7 were swapped */
-  #define USB_CFG_DMINUS_BIT      7    /* Rev.2 and previous was 6 */
+  // #define USB_CFG_DMINUS_BIT      7    /* Rev.2 and previous was 6 */
+  #define USB_CFG_DMINUS_BIT  3
 #endif
 /* This is the bit number in USB_CFG_IOPORT where the USB D- line is connected.
  * This may be any bit in the port.
@@ -91,12 +92,12 @@ these macros are defined, the boot loader usees them.
  */
 #ifndef JUMPER_BIT
   /* This is Revision 3 and later (where PD6 and PD7 were swapped */
-  #define JUMPER_BIT           6       /* Rev.2 and previous was 7 */
+  // #define JUMPER_BIT           7       /* Rev.2 and previous was 7 */
+  #define JUMPER_BIT          0
 #endif
 /* 
  * jumper is connected to this bit in port "JUMPER_PORT", active low
  */
-
 #define USB_CFG_CLOCK_KHZ       (F_CPU/1000)
 /* Clock rate of the AVR in MHz. Legal values are 12000, 16000 or 16500.
  * The 16.5 MHz version of the code requires no crystal, it tolerates +/- 1%
