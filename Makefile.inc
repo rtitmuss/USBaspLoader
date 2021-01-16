@@ -38,7 +38,7 @@ DANGEROUS=0
 # PROGRAMMER contains AVRDUDE options to address your programmer
 # PROGRAMMER = -c pony-stk200
 # PROGRAMMER = -c usbasp
-PROGRAMMER = -c avrisp -P /dev/cu.usbmodem14101 -b19200
+PROGRAMMER = -c avrisp -P /dev/cu.usbmodem* -b19200
 
 #  since USBaspLoader supports HAVE_BLB11_SOFTW_LOCKBIT...
 LOCKOPT = -U lock:w:0x3f:m
@@ -152,7 +152,7 @@ DEFINES_168             = -DCONFIG_USE__EXCESSIVE_ASSEMBLER -DCONFIG_NO__NEED_WA
 
 
 
-FUSEOPT_328             = -U lfuse:w:0xd7:m -U hfuse:w:0xd0:m -U efuse:w:0x04:m
+FUSEOPT_328             = -U lfuse:w:0xd7:m -U hfuse:w:0xd0:m -U efuse:w:0xfc:m
 BOOTLOADER_ADDRESS_328  = 0x7000
 DEFINES_328             = #-DEMPTY
 
